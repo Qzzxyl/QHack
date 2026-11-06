@@ -1,0 +1,9 @@
+ride_id,ride_name,wait_minutes,ride_minutes,ride_minutes_source,wait_sample_count
+R_1,Despicable Me Minion Mayhem,41.92,,,52
+R_2,Loop-Dee Doop-Dee,43.12,,,72
+R_3,Harry Potter and the Forbidden Journey,52.08,,,36
+R_4,Flight of the Hippogriff,47.72,,,79
+R_5,Jurassic World Adventure,43.96,,,53
+R_6,Jurassic Flyers,56.43,,,49
+R_7,Transformer: Battle for the AllSpark,40.79,,,38
+R_8,Lanterns of Legendary Legends,25.18,,,84
