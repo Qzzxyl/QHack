@@ -88,3 +88,11 @@ python app.py
 
 example_optimizer.py 使用合成数据，最多返回一个可行景点，仅用于演示接口。组员可复制它为 my_optimizer.py，用实际数据实现 get_attractions，用选点及排序算法实现 optimize，再把环境变量改成 my_optimizer 并重启。多站路线中，每一站的 walk_distance_m 从上一站计算，origin_distance_m 始终从出发点计算。
 
+
+export UNIVERSAL_OPTIMIZER_MODULE=safe_optimizer
+export UNIVERSAL_SOLVER_MODE=qaoa
+export UNIVERSAL_QAOA_SHOTS=64
+export UNIVERSAL_QAOA_MAXITER=5
+export UNIVERSAL_QAOA_TOP_K=3
+
+python3 app.py
