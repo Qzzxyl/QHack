@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="universal-data-mode" content="demo"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Universal Day · Your Universal Adventure</title><link rel="stylesheet" href="/styles.css"><script src="/app.js" defer></script></head>
+<body>
+<header class="topbar" id="top"><a class="brand" href="#entrance" aria-label="Universal Day home"><span class="brand-icon">✳</span> UNIVERSAL<span class="light">DAY</span><span class="beta">TRAVEL LAB</span></a><nav aria-label="Visit stages"><a href="#entrance">01 Entrance</a><a href="#attractions">02 Rides</a><a href="#planner">03 Plan</a><a href="#results">04 Route</a></nav><span class="header-note"><i></i> Universal Beijing Resort · UI prototype</span></header>
+<main>
+<section class="world-cover" id="entrance" tabindex="-1" aria-labelledby="world-title">
+  <figure class="photo-stage">
+    <div class="photo-frame">
+      <div class="fountain-photo">
+        <img class="world-art" src="/universal-globe.png" alt="The Universal globe and fountains at the park entrance" width="750" height="869">
+      </div>
+      <figcaption><span>FIELD VIEW 01</span><span>UNIVERSAL GLOBE</span></figcaption>
+    </div>
+  </figure>
+  <div class="world-copy">
+    <h1 id="world-title">Plan your day<br><em>at Universal.</em></h1>
+    <p class="world-subtitle">Browse attractions, set your available time and build an itinerary for your visit.</p>
+  </div>
+  <details class="visit-intro" id="visit-intro">
+    <summary>What Can We Help You With?
+      <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="m5 6 7 6 7-6M5 12l7 6 7-6"/>
+      </svg>
+    </summary>
+    <ul class="intro-bubbles">
+      <li><strong>Explore the rides</strong><span>See attraction photos, sample ratings and estimated waits.</span></li>
+      <li><strong>Set your visit plan</strong><span>Choose a starting point, enter your time and pick what you enjoy.</span></li>
+      <li><strong>Get your route</strong><span>See your ride order, walking distances and arrival times.</span></li>
+    </ul>
+    <div class="entrance-action">
+      <a class="world-cta" href="#attractions">Start Your Journey <span aria-hidden="true">→</span></a>
+    </div>
+  </details>
+</section>
+<section class="panel attractions-panel" id="attractions" tabindex="-1">
+<div class="section-top"><div><div class="section-kicker">02 / EXPLORE</div><h2>Attraction board</h2></div></div><div class="catalog-toolbar"><div class="filters" role="group" aria-label="Attraction categories"><button class="active" data-filter="all" type="button">All rides</button><button data-filter="thrill" type="button">Thrills</button><button data-filter="family" type="button">Family fun</button><button data-filter="magic" type="button">Magic</button></div><label class="sr-only" for="sort">Sort attractions</label><select id="sort"><option value="default">Recommended</option><option value="rating">Top rated</option><option value="queue">Shortest wait</option><option value="distance">Nearest to you</option></select></div><div class="carousel-controls" aria-label="Attraction playback">
+  <button id="rides-prev" type="button" aria-label="Previous attractions">←</button>
+  <button id="rides-next" type="button" aria-label="Next attractions">→</button>
+</div>
+<p id="catalog-status" role="status" hidden></p><div id="ride-list" class="ride-grid" aria-label="Attractions carousel"></div><a class="scene-link" href="#planner">Plan your visit →</a></section>
+<section class="investigation" id="planner" tabindex="-1" aria-labelledby="investigation-title">
+
+  <div class="investigation-heading">
+    <div class="section-kicker">03 / PLAN YOUR VISIT</div>
+    <h2 id="investigation-title">What Is Your Visit Plan?</h2>
+    <p>Choose your starting point, how long you have, and what you enjoy.</p>
+  </div>
+<div class="workspace">
+<div class="panel input-panel">
+<form id="planner-form">
+<div class="form-scene"><label for="location">Where are you now?<span class="required">*</span></label><div class="select-wrap"><select id="location" required><option value="R_1">Despicable Me Minion Mayhem</option><option value="R_2">Loop-Dee Doop-Dee</option><option value="R_3">Harry Potter and the Forbidden Journey</option><option value="R_4">Flight of the Hippogriff</option><option value="R_5">Jurassic World Adventure</option><option value="R_6">Jurassic Flyers</option><option value="R_7">Transformer: Battle for the AllSpark</option><option value="R_8">Lanterns of Legendary Legends</option></select></div></div>
+
+<div class="form-scene"><label for="duration">Total visit time</label><div class="visit-time"><input type="number" id="duration" min="30" max="720" step="1" value="300" required inputmode="numeric" aria-describedby="duration-help"><span>min</span></div><p id="duration-help">Enter 30–720 minutes.</p></div>
+<div class="form-scene"><fieldset><legend>What do you enjoy?<span class="required">*</span><small>Choose any</small></legend><div class="preferences"><label><input type="checkbox" name="preference" value="thrill" checked><span>⚡ Thrills</span></label><label><input type="checkbox" name="preference" value="magic" checked><span>✧ Magic</span></label><label><input type="checkbox" name="preference" value="family"><span>☀ Family fun</span></label><label><input type="checkbox" name="preference" value="immersive"><span>◈ Immersive</span></label></div></fieldset></div>
+<button class="optimize" type="submit" id="optimize">✦ Optimize · Plan my route <span>→</span></button><p id="form-error" class="error" role="alert"></p>
+</form><a class="scene-link" href="#attractions">Browse attractions →</a></div></div>
+</section>
+<section class="panel results-panel" id="results" tabindex="-1" aria-live="polite">
+<div class="section-top"><div><div class="section-kicker">04 / YOUR ITINERARY</div><h2>Your itinerary</h2></div><span class="result-tag" id="result-tag">Ready when you are</span></div><div id="route-content"><div class="empty-state"><div class="empty-icon">↝</div><h3>Your next adventure starts here.</h3><p>Set your preferences and click Optimize.<br>Your route, wait times, distances and total duration will appear here.</p><span>01 Set preferences <b>→</b> 02 Plan your route <b>→</b> 03 Start exploring</span></div></div><a class="scene-link" href="#planner">← Edit visit preferences</a></section>
+<footer><span class="brand-mini">✳ UNIVERSAL DAY</span><span>A little planning. A lot more adventure.</span><span>Student project · Unofficial service</span></footer>
+</main></body></html>
